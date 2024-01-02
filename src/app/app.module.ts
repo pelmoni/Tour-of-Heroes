@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 import { AppComponent } from './app.component';
 import {HeroesComponent} from "./heroes/heroes.components";
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import {HeroesComponent} from "./heroes/heroes.components";
   imports: [
     BrowserModule,
     FormsModule,
+    HeroDetailComponent,
     HeroesComponent
   ],
   providers: [],
