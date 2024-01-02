@@ -3,16 +3,17 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.components';
+import {HeroesComponent} from "./heroes/heroes.components";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent
+
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HeroesComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
