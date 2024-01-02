@@ -5,17 +5,19 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 import { AppComponent } from './app.component';
 import {HeroesComponent} from "./heroes/heroes.components";
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    MessagesComponent,
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HeroDetailComponent,
-    HeroesComponent
+    HeroDetailComponent,            //fix standalone issues
+    HeroesComponent                 //fix standalone issues
   ],
   providers: [],
   bootstrap: [AppComponent]
