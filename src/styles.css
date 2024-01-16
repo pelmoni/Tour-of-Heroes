@@ -6,13 +6,21 @@ h1 {
 }
 
 h2, h3 {
-  color: #444;
+  color: var(--text-color);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
 }
 
+:root {
+  --bg-color: white; /* Background color */
+  --text-color: black; /* Text color */
+  --bt-color: lightgray; /*button color*/
+}
+
 body {
   margin: 2em;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 body, input[type="text"], button{
@@ -21,7 +29,7 @@ body, input[type="text"], button{
 }
 
 button{
-  background-color: #eee;
+  background-color: var(--bt-color);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -45,4 +53,24 @@ botton:disabled{
 /* everywhere else */
 *{
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.dark-theme {
+  --bg-color: black; /* Background color */
+  --text-color: lightgray; /* Text color */
+  --bt-color: grey; /*button color*/
+}
+
+#toggle {
+  position: fixed; /* Fix the position of the button */
+  bottom: 10px; /* Set the bottom position to 10 pixels */
+  right: 10px; /* Set the right position to 10 pixels */
+  padding: 10px; /* Add some space around the button */
+  border: none; /* Remove the border */
+  border-radius: 5px; /* Add some rounded corners */
+  cursor: pointer; /* Change the cursor to a pointer */
+}
+/* Change the button color on hover */
+#toggle:hover {
+  background-color: gray;
 }
